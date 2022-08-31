@@ -7,6 +7,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.ByteArrayInputStream;
+import java.util.List;
 
 public class PageAmazonHome extends BaseMethods {
     public PageAmazonHome(WebDriver driver) {
@@ -63,7 +64,9 @@ public class PageAmazonHome extends BaseMethods {
 
     @Step("chose Cards Side Tool Bar")
     public void choseCardsSideToolBar() {
-        WebElement choseCards = findElement(By.xpath("//*[@id=\"n/166239011\"]"));
+        //findElement(By.xpath("//*[@id=\"departments\"]/ul"));
+        WebElement choseCards = findElement(By.cssSelector("#n\\/166239011 > span > a"));
+       // WebElement choseCards = findElement(By.xpath("//*[@id=\"n/166239011\"]"));
         choseCards.click();
 
         Allure.addAttachment("chose Cards Side Tool Bar", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
@@ -71,7 +74,9 @@ public class PageAmazonHome extends BaseMethods {
 
     @Step("click Top 4 Stars Side Tool Bar")
     public void clickTop4StarsSideToolBar() {
-        WebElement ChoseTop4Stars = findElement(By.xpath("//*[@id=\"p_72/1248963011\"]/span/a"));
+        WebElement ChoseTop4Stars = findElement(By.cssSelector("[class='a-icon a-icon-star-medium a-star-medium-4']"));
+       // WebElement ChoseTop4Stars = findElement(By.xpath("//*[@id=\"p_72/1248963011\"]/span/a"));
+                                                                       //*[@id="p_72/3014475011"]   //*[@id="p_72/3014475011"]/span/a
         ChoseTop4Stars.click();
 
         Allure.addAttachment("click Top 4 Stars Side Tool Bar", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
@@ -79,7 +84,7 @@ public class PageAmazonHome extends BaseMethods {
 
     @Step("random Pick Ultimate Rare Card Bundele")
     public void randomPickUltimateRareCardBundele() {
-        WebElement choseAnyUltimateRareCardBundle = findElement(By.xpath("//*[contains(text(),'Ultimate Rare Card Bundle ')]"));
+        WebElement choseAnyUltimateRareCardBundle = findElement(By.xpath("//*[contains(text(),'Rare Card Bundle')]"));
         System.out.println(choseAnyUltimateRareCardBundle.getText());
         choseAnyUltimateRareCardBundle.click();
 

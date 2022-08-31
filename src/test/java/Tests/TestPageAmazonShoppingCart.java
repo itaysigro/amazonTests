@@ -35,8 +35,6 @@ public class TestPageAmazonShoppingCart {
     public void runTestcase4() {
         PageAmazonShoppingCart pas = new PageAmazonShoppingCart(driver);
         pas.clickGift();
-        pas.checkPriceCart();
-        //pas.waitForStaleAndcatchAllElement();
-        // pas.clickCheckOutBuy();
+         pas.clickCheckOutBuy();
     }
 }

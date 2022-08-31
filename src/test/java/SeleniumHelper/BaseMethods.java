@@ -32,8 +32,9 @@ public class BaseMethods {
     // ======================================================================================================================
     // waits
 
-    public void waitForStaleNessOfSomeElement() {
+    public void waitForStaleNessOfSomeElement(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.stalenessOf((WebElement) locator));
     }
 
     public void waitUntilElementVisible(By locator) {
@@ -43,6 +44,7 @@ public class BaseMethods {
     public void waitUntilElementClickable(By locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
+
 
     // ======================================================================================================================
 

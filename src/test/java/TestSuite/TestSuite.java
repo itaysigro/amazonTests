@@ -18,7 +18,7 @@ public class TestSuite {
         wd = Utils.createDriverObj(2);
     }
 
-    /*@Test(priority = 1)
+    @Test(priority = 1)
     @Description("Visit Amazon And Click Register")
     public void testCase1() {
         TestPageAmazonHome tpa = new TestPageAmazonHome(wd);
@@ -32,7 +32,7 @@ public class TestSuite {
         tpa.runTestcaseclickContinueWIthEmptyFeildsRgister();
         tpa.runTestcaseNameAndEmailRgister();
         tpa.runTestcasePassRgisterScreen();
-    }*/
+    }
 
     @Test(priority = 3)
     @Description("Enter Items Properties in srach filed and enter to shopping cart")
@@ -50,6 +50,6 @@ public class TestSuite {
 
     @AfterTest
     public void Teardown() {
-        //wd.quit();
+        wd.quit();
     }
 }
