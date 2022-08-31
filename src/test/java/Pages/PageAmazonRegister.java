@@ -88,7 +88,7 @@ public class PageAmazonRegister extends BaseMethods {
             removeInput(By.cssSelector("#ap_password_check"));
             findElement(By.cssSelector("#ap_password_check")).sendKeys("123456");
             click(By.cssSelector("#continue"));
-            System.out.println("i cant continum to registr becuse thay have robot verify");
+            System.out.println("i cant continue to register because they have robot verify");
 
             Allure.addAttachment("RePass Match", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
         }
