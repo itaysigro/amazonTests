@@ -1,13 +1,11 @@
 package Pages;
 
-import SeleniumHelper.BaseMethods;
+import Utilities.BaseMethods;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.ByteArrayInputStream;
-import java.util.List;
 
 
 public class PageAmazonShoppingCart extends BaseMethods {
@@ -43,7 +41,7 @@ public class PageAmazonShoppingCart extends BaseMethods {
 
     @Step("click Check Out Buy")
     public void clickCheckOutBuy() {
-       // waitForStaleNessOfSomeElement(By.cssSelector("#sc-buy-box-ptc-button"));
+        // waitForStaleNessOfSomeElement(By.cssSelector("#sc-buy-box-ptc-button"));
         click(By.cssSelector("#sc-buy-box-ptc-button > span > input"));
         /*WebElement BuyCart = findElement(By.cssSelector("#sc-buy-box-ptc-button"));
         BuyCart.click();*/

@@ -4,7 +4,6 @@ import DataBase.Excel;
 import Pages.PageAmazonHome;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 public class TestPageAmazonHome {
@@ -33,7 +32,7 @@ public class TestPageAmazonHome {
     }
 
     public void runTest_Entrance_Registration() {
-        PageAmazonHome page = new PageAmazonHome (driver);
+        PageAmazonHome page = new PageAmazonHome(driver);
         page.visitAmazon();
         page.clickNewRegister();
     }

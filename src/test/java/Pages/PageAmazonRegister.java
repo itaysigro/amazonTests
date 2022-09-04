@@ -1,11 +1,10 @@
 package Pages;
 
-import SeleniumHelper.BaseMethods;
+import Utilities.BaseMethods;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.ByteArrayInputStream;
 
 public class PageAmazonRegister extends BaseMethods {

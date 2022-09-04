@@ -1,6 +1,6 @@
 package DataBase;
 
-import SeleniumHelper.BaseMethods;
+import Utilities.BaseMethods;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -10,21 +10,19 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.*;
 
 public class Excel extends BaseMethods {
 
+    XSSFWorkbook wb;
+    XSSFSheet sheet1;
+
     public Excel(WebDriver driver) {
         super(driver);
     }
-
     public Excel(WebDriverWait wait) {
         super(wait);
     }
-
-    XSSFWorkbook wb;
-    XSSFSheet sheet1;
 
     @Step("read Excel Search Item 1")
     public void readExcelSearchItem1(String excelPath) {

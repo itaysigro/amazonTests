@@ -1,14 +1,13 @@
-package SeleniumHelper;
+package Utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Utils {
+public class IntWebDriver {
     // 1=firefox 2=chrome 3=edge
-    public static WebDriver createDriverObj(int browserType)
-    {
+    public static WebDriver createDriverObj(int browserType) {
         WebDriver driver = null;
         switch (browserType) {
             case 1:
@@ -19,12 +18,9 @@ public class Utils {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
-
-
             default:
                 break;
         }
-
         return driver;
     }
 }

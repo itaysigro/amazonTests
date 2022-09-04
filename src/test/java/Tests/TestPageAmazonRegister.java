@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestPageAmazonRegister {
-    private WebDriver driver;
+    private final WebDriver driver;
     private WebDriverWait wait;
 
     public TestPageAmazonRegister(WebDriver driver) {
@@ -14,17 +14,18 @@ public class TestPageAmazonRegister {
         this.wait = wait;
     }
 
-    public void runTestcaseclickContinueWIthEmptyFeildsRgister(){
+    public void runTestcaseclickContinueWIthEmptyFeildsRgister() {
         PageAmazonRegister page = new PageAmazonRegister(driver);
         page.clickContinueWIthEmptyFeildsOrJustContinue();
     }
 
-    public void runTestcaseNameAndEmailRgister(){
+    public void runTestcaseNameAndEmailRgister() {
         PageAmazonRegister page = new PageAmazonRegister(driver);
         page.verifyName();
         page.verifyEmailEmptyField();
         page.verifyWorngEmailField();
     }
+
     public void runTestcasePassRgisterScreen() {
         PageAmazonRegister page = new PageAmazonRegister(driver);
         page.verifyPassUnder6CharOrEmpty();

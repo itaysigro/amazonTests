@@ -1,6 +1,6 @@
 package TestSuite;
 
-import SeleniumHelper.Utils;
+import Utilities.IntWebDriver;
 import Tests.TestPageAmazonHome;
 import Tests.TestPageAmazonRegister;
 import Tests.TestPageAmazonShoppingCart;
@@ -15,7 +15,7 @@ public class TestSuite {
 
     @BeforeClass
     public void setup() {
-        wd = Utils.createDriverObj(2);
+        wd = IntWebDriver.createDriverObj(2);
     }
 
     @Test(priority = 1)
