@@ -48,8 +48,8 @@ public class TestSuite {
         tpas.runTestcase4();
     }
 
-    @AfterTest
+    /*@AfterTest
     public void Teardown() {
         wd.quit();
-    }
+    }*/
 }

@@ -4,8 +4,10 @@ import Utilities.BaseMethods;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.ByteArrayInputStream;
+import java.util.List;
 
 public class PageAmazonHome extends BaseMethods {
     public PageAmazonHome(WebDriver driver) {
@@ -16,9 +18,11 @@ public class PageAmazonHome extends BaseMethods {
         super(wait);
     }
 
+    WebDriverWait wait = null;
     @Step("visit Amazon")
     public void visitAmazon() {
         visit("https://amazon.com");
+        getDriver().manage().window().maximize();
 
         Allure.addAttachment("visit Amazon", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
     }
@@ -47,9 +51,13 @@ public class PageAmazonHome extends BaseMethods {
 
     @Step("click First Result")
     public void clickFirstResult() {
-        click(By.cssSelector("#search > div.s-desktop-width-max.s-desktop-content.s-opposite-dir.sg-row > div.s-matching-dir.sg-col-16-of-20.sg-col.sg-col-8-of-12.sg-col-12-of-16 > div > span:nth-child(4) > div.s-main-slot.s-result-list.s-search-results.sg-row > div:nth-child(2) > div > div > div > div > div > div.sg-col.sg-col-4-of-12.sg-col-8-of-16.sg-col-12-of-20.s-list-col-right > div > div > div.a-section.a-spacing-none.puis-padding-right-small.s-title-instructions-style > h2 > a"));
+      try {
+            click(By.cssSelector("span[class='a-size-medium a-color-base a-text-normal']"));
 
-        Allure.addAttachment("click First Result", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
+            Allure.addAttachment("click First Result", new ByteArrayInputStream(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES)));
+        }catch (Exception e){
+           System.out.println("Elem Not Found!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        }
     }
 
     @Step("choose Books Side Tool Bar")

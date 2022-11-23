@@ -1,0 +1,1 @@
+{"uuid":"adadf22c-c8d0-41a3-89cf-d87a0a88234c","name":"TestSuite.TestSuite","children":["9f01096e-04a1-4865-99c1-35407f11e08c"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1669240560611,"stop":1669240573884}],"afters":[],"start":1669240560486,"stop":1669240610252}
